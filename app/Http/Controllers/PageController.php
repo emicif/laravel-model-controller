@@ -8,8 +8,11 @@ use App\Movie;
 class PageController extends Controller
 {
     public function index(){
-        $movies = Movie::all();
+        $movies = Movie::where('title', 0)->get();
         return view('home', ["movies" => $movies]);
+
     }
 
+
 }
+
