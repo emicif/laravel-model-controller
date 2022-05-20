@@ -1,16 +1,35 @@
-<h1>
-    DATABASE MOVIE
-</h1>
-{{-- @dump($movies) --}}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="card">
-    @foreach ($movies as $index => $item)
-        <h2>TITLE: {{ $item['title'] }}</h2>
-        <p>ORIGINAL TITLE: {{ $item['original_title'] }}</p>
-        <p>NATIONALITY: {{ $item['nationality'] }}</p>
-        <p>DATE: {{ $item['date'] }}</p>
-    @endforeach
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Laravel Model Controller</title>
+</head>
+
+<body>
+    <h1>
+        DATABASE MOVIE
+    </h1>
+    {{-- @dump($movies) --}}
+
+    <div class="card-container">
+        @foreach ($movies as $index => $item)
+            <div class="card">
+                <h2>{{ $item['title'] }}</h2>
+                <p>{{ $item['original_title'] }}</p>
+                <p class="nationality">{{ $item['nationality'] }}</p>
+                <p>{{ $item['date'] }}</p>
+            </div>
+        @endforeach
+    </div>
 
 
-{{-- <p>{{ $movies[0]['title'] }} </p> --}}
+
+
+    {{-- <p>{{ $movies[0]['title'] }} </p> --}}
+</body>
+
+</html>
