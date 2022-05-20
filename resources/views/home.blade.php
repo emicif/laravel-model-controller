@@ -19,7 +19,7 @@
         @foreach ($movies as $index => $item)
             <div class="card">
                 <h2>{{ $item['title'] }}</h2>
-                <p>{{ $item['original_title'] }}</p>
+                <h4>{{ $item['original_title'] }}</h4>
                 <p class="nationality">{{ $item['nationality'] }}</p>
                 <p>{{ $item['date'] }}</p>
             </div>
